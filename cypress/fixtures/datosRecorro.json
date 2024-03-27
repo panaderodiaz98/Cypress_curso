@@ -1,0 +1,6 @@
+[
+    {"name": "Martin", "email": "Martin@gmail.com", "body": "Fixtures are a great way to mock data for responses to routes"},
+    {"name": "Fernando", "email": "Fernando@gmail.com", "body": "Fixtures are a great way to mock data for responses to routes"},
+    {"name": "Jose", "email": "Jose@gmail.com", "body": "Fixtures are a great way to mock data for responses to routes"},
+    {"name": "Nacho", "email": "Nacho@gmail.com", "body": "Fixtures are a great way to mock data for responses to routes"}
+]

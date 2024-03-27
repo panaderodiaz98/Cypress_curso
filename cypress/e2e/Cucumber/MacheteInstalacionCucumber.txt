@@ -1,0 +1,19 @@
+1- https://www.youtube.com/watch?v=xIqXs8IsllI video explicativo configuracion cypress cucumber
+2. Instalar dependencias "npm i -D cypress @bahmutov/cypress-esbuild-preprocessor esbuild" y "npm install @badeball/cypress-cucumber-preprocessor"
+3. Configurar el archivo cypress.config.js. 
+    Imports: import { defineConfig } from "cypress";
+             import createBundler from "@bahmutov/cypress-esbuild-preprocessor";
+             import { addCucumberPreprocessorPlugin } from "@badeball/cypress-cucumber-preprocessor";
+             import { createEsbuildPlugin } from "@badeball/cypress-cucumber-preprocessor/esbuild";
+    Config e2e:     e2e: {
+                setupNodeEvents(on, config) {
+                // implement node event listeners here
+                const bundler = createBundler({
+                    plugins: [createEsbuildPlugin(config)],
+                });
+                on("file:preprocessor",bundler);
+                addCucumberPreprocessorPlugin(on,config);
+                return config;
+                
+                },
+    Config ruta archivos features: "specPattern:"cypress/e2e/features/*.feature""

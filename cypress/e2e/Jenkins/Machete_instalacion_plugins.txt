@@ -1,0 +1,10 @@
+PLUGINS NECESARIOS EN SERVIDOR jenkins
+
+1. GITHUB: 
+    - GITHUB integration
+    - GITHUB authentication
+    - GITHUB pull request builder
+    - GITHUB organization folder
+2. NodeJS
+3. Green Balls
+4. MockAgent

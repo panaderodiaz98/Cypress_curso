@@ -1,0 +1,4 @@
+1. Los CUSTOM COMANDS son comandos que hacen acciones predefinidas donde le podemos pasar argumentos si quisieramos, lo que nos permite reutilizar codigo centralizado para su posterior mantenimiento simple
+   Estos CUSTOM COMANDS se deben declarar en el archivo e2e.js de la ruta: "cypress/support/commands.js"
+   Son lo que serian las librerias de TOSCA
+2. Declarar normalmente dentro de ese archivo y llamar en los casos de pruebas como si fueran metodos mediante el "cy."

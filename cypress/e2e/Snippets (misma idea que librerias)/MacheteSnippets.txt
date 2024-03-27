@@ -1,0 +1,24 @@
+1. Apretar CTRL + P
+2. Ingresar comando ">snippets: Configure user snippets"
+3. Elegir la opcion "Javascript" (lo que abrira el archivo JSON)
+4. Maqueta a continuacion de SNIPET:
+"ObjetoXPATH": {
+		"prefix": "c_xpath",
+		"body": [
+			"cy.xpath('${1:argumento}').should('be.visible').as('${2:alias}')",
+            "cy.get('@${3:aliasCreado}').click()"
+		],
+		"description": "Objeto xpath"
+	 }
+5. Reemplazar maqueta segun corresponda, ej 
+    - "ObjetoXPATH" se refiere al nombre de la accion que haremos.
+    - "prefix" es el comando por el cual se llamara al SNIPET
+    - "Body" se pondra dentro de los [] la linea de comando/accion que queramos
+    - "description" es una descripcion/comentario para que el usuario entienda que hace el snippet en cuestion
+    - "${1:argumento}" esto nos permitira decirle que necesitamos completar con argumentos en la parte deseada donde la aplicacion fijara el cursor automaticamente para que sepamos instantaneamente
+    - Se podrian poner dos lineas o mas de codigo mediante la "," ejemplo: 
+        "body": [
+			"cy.xpath('${1:argumento}').should('be.visible').as('${2:alias}')",
+            "cy.get('@${3:aliasCreado}').click()"
+		]
+6. Invocar desde los testcases con el comando definido en "prefix" y USAR

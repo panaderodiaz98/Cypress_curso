@@ -1,0 +1,6 @@
+1- Los fixtures/clases de modelado se hacen en la carpeta SUPPORT.
+2- Se debe declarar al final de la clase la sentencia "export default xxx" (xxx seria el nombre de la clase)
+3- Se debe importar la clase desde el archivo de test que usemos y crear una constante que inicialice la clase correspondiente. Ej;
+   "import NombreDeLaClase.cy.js from ../../..(ruta del archivo)" Importo la clase
+   "const xxx = new NombreDeLaClase();" Inicializo clase
+4- Usar los la clase mediante la constante declarada!

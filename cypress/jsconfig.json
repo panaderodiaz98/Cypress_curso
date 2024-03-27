@@ -1,0 +1,1 @@
+{ "compilerOptions": { "allowJs": true, "types": ["cypress"] }, "include": ["**/*.*", "../Machete_cypress_selectores.js"] } /* Codigo para incluir autocompletado cypress */

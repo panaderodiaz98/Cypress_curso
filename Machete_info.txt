@@ -1,0 +1,13 @@
+Archivo machete ayuda!
+
+Verificar instalacion node: node --version
+1-Instalar paquetes/iniciar proyecto: npm init (Inicia tu páckage json)
+2-Instalar cypress: npm install cypress --save dev
+3-Verificar instalacion correcta cypress: node_modules\.bin\cypress open
+3-NPX instalar por las dudas: npm install -g npx (en el caso que no ande el paso 3, instalar)
+4- Si te arroja error de actualizacion version o lo que fuere: npx cypress install --foce
+5- Paso 3 se puede reemplazar por: npx cypress open
+6- Parar ejecucion de cypress en curso: ctrl + c desde termina
+7- Pagina curso @https://rodrigovillanueva.com.mx/ encontrar practicas
+8- Configurar autocompletado cypress: Crear archivo "jsconfig.json" en ruta proyecto y poner codigo "{ "compilerOptions": { "allowJs": true, "types": ["cypress"] }, "include": ["**/*.*"] } /* Codigo para incluir autocompletado cypress */"
+   Pagina "https://docs.cypress.io/guides/tooling/IDE-integration"

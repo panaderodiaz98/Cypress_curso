@@ -1,0 +1,9 @@
+1. Apagar/prender servidor desde la consola CMD (con la ruta de la carpeta jenkins ingresada): 
+    jenkins start 
+    jenkins stop
+2. Instalar JAVA, JENKINS, configurar variavles entorno JDK
+3. Descargar los plugins necesarios para comenzar (machete_instalacion_plugins)
+4. Configurar en Jenkins la ruta del JDK, Git.exe y NODEJS en "Administrar jenkins/tools"
+ JAVA: en nombre "java_JDK" y en ruta pasarle la ruta de la carpeta JAVA ej "C:\Program Files\Java\jdk-21"
+ GIT: Name queda en default y en la ruta pasarle la carpeta dond eesta el bin donde esta el archivo "git.exe". EJ "C:\Program Files\Git\bin\git.exe"
+ NODEJS: En nombre ingresar "Node" y click en instalar automaticamente, a diferencia de java que ingresamos su ruta de instalacion

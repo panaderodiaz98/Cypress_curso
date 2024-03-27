@@ -1,0 +1,12 @@
+1. Los archivos de fixtures en este caso json pero pueden ser por ejemplos excels, se crean en la carpeta "fixtures"
+2. Se debe importar la ruta de json ej "import datos from '../../fixtures/datos.json'"
+3-1. Se puede usar el archivo simplemente por el import!!!!
+3-2. Se puede usar el archivo usando la funcion fixture. Ej:
+        Luego llamar una funcion fixture para iniciar variable que almacene toda la data del json. Ej:
+        "cy.fixture('datos').then(function(datos){
+                /* this.datos = datos */ 
+                globalThis = datos /* Le digo que almacene toda la info en data */
+            })"
+4. Luego llamando esa variable se puede llamar a la info deseada. Ej "cy.get("#edit-contact-address-2").type(datos.name)"
+5. MOCKDATA generador de JSON para pruebas "mockaroo.com" pagina web
+6. Se puede transformar EXCEL a JSON mediante la pagina "beautifyTools"

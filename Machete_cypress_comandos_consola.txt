@@ -1,0 +1,25 @@
+/* 1 */ npm install cypress --save dev 
+Comando para instalar cypress limpio.
+        npx cypress install --foce
+UTILIZAR ESTE MANDO PARA INSTALAR CYPRESS
+/* 2 */ npm init 
+Inicia tu páckage json
+/* 3 */ node_modules\.bin\cypress open
+Verificar instalacion correcta cypress:
+/* 4 */ npm install -g npx
+NPX instalar por las dudas:
+/* 5 */ npx cypress open
+Abre interfaz cypress
+/* 6 */ node_modules\.bin\run
+Corre todas las pruebas existentes que hayas diseñado
+        npx cypress run 
+Mismo funcionamiento, escritura mas senciila. CORRE TODOS LOS CASOS SIN INTERFAZ A LA VISTA, es decir solo podes mirar el log desde consola
+/* 7 */  npx cypress run --headed
+Corre todas las pruebas existentes que hayas diseñado, CORRE TODOS LOS CASOS CON INTERFAZ A LA VISTA, es decir podes mirar la ejecucion en la venta cyppress
+/* 8 */  npx cypress run --browser chrome
+Corre las pruebas en navegador Chrome
+/* 9 */ npx cypress run --spec "cypress\e2e\hola_mundo.cy.js"
+Comando para ejecutar un archivo/prueba especifico pasandole la ruta
+/* 10 */ npx cypress run --spec "cypress\e2e\ComandosEnterTabEtc\*"
+Comando para ejecutar todas las pruebas de dicha carpeta elegida
+/* 11 */

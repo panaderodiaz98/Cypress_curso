@@ -1,0 +1,5 @@
+1- "git help xxx". Abre pagina donde figura manual del comando elegido ej "git help clone" abrira guia de el comando clone
+2- "git config --global user.namme "xxx"". Configura el user name propiamente por ej "Martin"
+   "git config" --global user.mail "xxx"".Configura el user mail propiamente por ej "panaderodiaz98@gmail.com"
+3- "git init". Inicializo proyecto git/iniciar copia-respaldo
+4- "git add." añade/hace copia del proyecto
