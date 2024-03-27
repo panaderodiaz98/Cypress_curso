@@ -2,4 +2,8 @@
 2- "git config --global user.namme "xxx"". Configura el user name propiamente por ej "Martin"
    "git config" --global user.mail "xxx"".Configura el user mail propiamente por ej "panaderodiaz98@gmail.com"
 3- "git init". Inicializo proyecto git/iniciar copia-respaldo
-4- "git add." añade/hace copia del proyecto
+4- "git add." añade/hace copia del proyecto de todo lo que tengas para agregar
+    "git add *.excel" añade todos los archivos que sean extension .excel en este caso
+5- "git status" te devuelve el estado de cosas se agregan al repositorio despues del git add
+6- "git commit -m "descripcion de los cambios o version para saber que contiene" Confirma y sube lo agregado con add y revisado mediante git status
+7- "git checkout -- ," Recupera archivos borrados en la misma sesion (no cuenta si se hizo un commit)
