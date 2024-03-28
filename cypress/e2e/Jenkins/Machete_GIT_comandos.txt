@@ -7,3 +7,5 @@
 5- "git status" te devuelve el estado de cosas se agregan al repositorio despues del git add
 6- "git commit -m "descripcion de los cambios o version para saber que contiene" Confirma y sube lo agregado con add y revisado mediante git status
 7- "git checkout -- ," Recupera archivos borrados en la misma sesion (no cuenta si se hizo un commit)
+8- "git push" Para subir los cambios al repo de GIT definitivamente
+9- "git pull" para cargar cambios que hayan hecho en la pagina de GIT

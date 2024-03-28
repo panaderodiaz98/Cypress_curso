@@ -10,6 +10,7 @@ module.exports = defineConfig({
   pageLoadTimeout: 20000, /* Timeout espera de carga de la pagina (comandos visit(), go(), reload()) */
   video: true,
   screenshotOnRunFailure: true,
+  projectId: "wig4et",
 }})
 
 
