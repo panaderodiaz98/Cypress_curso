@@ -9,3 +9,30 @@
  NODEJS: En nombre ingresar "Node" y click en instalar automaticamente, a diferencia de java que ingresamos su ruta de instalacion
 5. Luego de configurar jenkins, iniciar repo en github y subirlo mediante el push volver a JENKINS
 6. Debemos crear un proyecto local en jenkins que sera propiamente del proyecto cypress para ejecutarlo
+    - Ingresar nombre proyecto y Click en "Crear un proyecto de estilo libre"
+    - Ingresar descripcion del proyecto
+    - click GIT en "Configurar el origen del codigo fuente", ingresar URL del repositorio otorgado en la pagina de git del repo. 
+    - Ingresear credenciales en "credentials" y link repo en "repositoy URL". Establecer correctamente el Branch(rama)
+    - Añadir builds steps: "npm install" para que instale dependencias del package json y "npx cypress run --record --key 708bb905-e9e2-410c-9cfa-6fbf2e7030e1" generado anteriormente para que corra cypress!!!!
+7. Desde el panel de control ya deberiamos ver configurado el proyecto con su nombre correspondiente y podemos darle en Run. Podemos abrir el dashboard de cypress para verificar como va la corrida incluso
+8. Configurar nodos/vms extras. Nodos - new Node
+   - Nombre del nodo: VM2
+   - Permanent agent
+   - Descripcion: ingresar "Agente 2" por ejemplo
+   - Numero de ejecutores: Cuantos corriendo al mismo tiempo, ejemplo 3 para no cargar mucho la pc
+   - Directorio raiz remoto: ingresar /home/. Averiguar porque o si se debe ingreasr otra cosa
+   - Etiquetas: Ingresar correspondiente al numero de ejecutores ingresados anteriormente. Si ingresamos 3, se deberia ingresar
+                "VM2_1 VM2_2 VM2_3". Si por ej pusieramos 5 en Numero de ejecutores, ingresar 5.
+   - Usar: ingreasr opcion "Tanto como sea posible"
+   - Metodo de ejecucion: "Launch agent by coneecting it to the master/controller"
+   - Dispobinilidad: "Keep this agent online as much as possible"
+   - Propiedades del nodo: check en "localizacion de herramientas". Añadir 2:
+        . GIT - Ingreso ruta del "git.exe" en este caso: "C:\Program Files\Git\bin\git.exe"
+        . NODEJS - Ingreso ruta del "node.exe" en este caso: "C:\Program Files\nodejs\node.exe"
+        . Averiguar si se debe ingresar java? pero en el curso no lo ingresada
+   - Click en guardar.
+   - Luego hacer click en el nodo configurado. Para conectarlo en VSC mediante la consola ingresar el comando para descargar el agente:
+     "curl.exe -sO http://localhost:8080/jnlpJars/agent.jar". Descargara el agente y lo debemos cortar y pegar en el disco local C (por eso se configuro el "/home/" anteriormente)
+     Luego ejecutar el segundo comando que te da jenkins;
+     "java -jar agent.jar -jnlpUrl http://localhost:8080/computer/VM2/jenkins-agent.jnlp -workDir "/home/""
+   - Si persiste algun error de localhost8080 al crear esto, ir "Manage Jenkins, Security, section Agents, select Random and click Save." pag: "https://stackoverflow.com/questions/58719522/tcpslaveagentlistener-is-invalid-404-not-found"
