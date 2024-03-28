@@ -7,3 +7,5 @@
  JAVA: en nombre "java_JDK" y en ruta pasarle la ruta de la carpeta JAVA ej "C:\Program Files\Java\jdk-21"
  GIT: Name queda en default y en la ruta pasarle la carpeta dond eesta el bin donde esta el archivo "git.exe". EJ "C:\Program Files\Git\bin\git.exe"
  NODEJS: En nombre ingresar "Node" y click en instalar automaticamente, a diferencia de java que ingresamos su ruta de instalacion
+5. Luego de configurar jenkins, iniciar repo en github y subirlo mediante el push volver a JENKINS
+6. Debemos crear un proyecto local en jenkins que sera propiamente del proyecto cypress para ejecutarlo
