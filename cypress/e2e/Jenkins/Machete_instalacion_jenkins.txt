@@ -36,3 +36,5 @@
      Luego ejecutar el segundo comando que te da jenkins;
      "java -jar agent.jar -jnlpUrl http://localhost:8080/computer/VM2/jenkins-agent.jnlp -workDir "/home/""
    - Si persiste algun error de localhost8080 al crear esto, ir "Manage Jenkins, Security, section Agents, select Random and click Save." pag: "https://stackoverflow.com/questions/58719522/tcpslaveagentlistener-is-invalid-404-not-found"
+   - Estos nodos se deben encender con el comando anteriormente aclarado que te asigna JENKINS
+   - Luego se debe configurar archivo JenkinsFile con su correspondiente Pipeline en el proyecto. Una vez hecho, se debe configurar el nuevo proyecto PIPELINE en jenkins tambien
