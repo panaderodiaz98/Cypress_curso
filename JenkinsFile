@@ -1,35 +1,51 @@
-pípeline {
+pipeline {
     agent any
 
     tools {nodejs "node"}
 
     stages {
 
-        stage('Ejecutando en paralelo Cypress'){
+        stage('Cypress Parallel Test Suite') {
             parallel {
-                stage('Maquina 1'){
+                stage('VM2_1') {
                     agent {
                         label "VM2_1"
                     }
                     steps {
                         git url: 'https://github.com/panaderodiaz98/Cypress_curso.git'
-                        bat 'npm intall'
-                        bat 'npm update'
-                        bat 'npx cypress run --record --key 708bb905-e9e2-410c-9cfa-6fbf2e7030e1 --parallel'
+                        bat 'npm install'
+                        bat 'npm update'                       
+                        bat 'npx cypress run cypress run --record --key 708bb905-e9e2-410c-9cfa-6fbf2e7030e1  --parallel'
+                    
                     }
                 }
-                stage('Maquina 2'){
+
+                stage('VM2_2') {
                     agent {
-                        label "VM2_2"
+                        label "VM2_3"
                     }
                     steps {
                         git url: 'https://github.com/panaderodiaz98/Cypress_curso.git'
-                        bat 'npm intall'
-                        bat 'npm update'
-                        bat 'npx cypress run --record --key 708bb905-e9e2-410c-9cfa-6fbf2e7030e1 --parallel'
+                        bat 'npm install'
+                        bat 'npm update'                       
+                        bat 'npx cypress run cypress run --record --key 708bb905-e9e2-410c-9cfa-6fbf2e7030e1  --parallel'
+                    
                     }
                 }
-            }
+
+                stage('VM2_3') {
+                    agent {
+                        label "VM2_3"
+                    }
+                    steps {
+                        git url: 'https://github.com/panaderodiaz98/Cypress_curso.git'
+                        bat 'npm install'
+                        bat 'npm update'                       
+                        bat 'npx cypress run cypress run --record --key 708bb905-e9e2-410c-9cfa-6fbf2e7030e1  --parallel'
+                    
+                    }
+                }   
+            }         
         }
-    }
+    }          
 }
