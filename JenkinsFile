@@ -29,17 +29,6 @@ pípeline {
                         bat 'npx cypress run --record --key 708bb905-e9e2-410c-9cfa-6fbf2e7030e1 --parallel'
                     }
                 }
-                stage('Maquina 3'){
-                    agent {
-                        label "VM2_3"
-                    }
-                    steps {
-                        git url: 'https://github.com/panaderodiaz98/Cypress_curso.git'
-                        bat 'npm intall'
-                        bat 'npm update'
-                        bat 'npx cypress run --record --key 708bb905-e9e2-410c-9cfa-6fbf2e7030e1 --parallel'
-                    }
-                }
             }
         }
     }
