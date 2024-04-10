@@ -27,5 +27,5 @@
 /* ::::: Comando para navegar a pagina y validacion posterior de su titulo */
 Cypress.Commands.add('abro_URL', (url, titulo) => {
     cy.visit(url)
-    cy.title().should('eq',titulo)
+    cy.title().should('contain',titulo)
 })

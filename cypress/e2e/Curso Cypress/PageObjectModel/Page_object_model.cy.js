@@ -1,4 +1,4 @@
-import Proyecto_uno from "../../support/POM/proyecto_uno/Proyecto_uno.cy" /* Importo la clase */
+import Proyecto_uno from "../../../support/POM/proyecto_uno/Proyecto_uno.cy" /* Importo la clase */
 const proyecto_uno = new Proyecto_uno; /* Inicializo clase */
 
 describe('¨POM', () =>{
