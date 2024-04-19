@@ -1,0 +1,3 @@
+1. Descargo imagen de docker para poder ejecutar (sinonimo de descargar pc donde se ejecuta)
+    docker pull cypress/included:latest
+    Con el comando latest descargo la ultima version disponible de docker

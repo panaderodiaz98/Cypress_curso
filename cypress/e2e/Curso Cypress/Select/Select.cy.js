@@ -9,7 +9,7 @@ describe('#Seccion 5: Primeras pruebas..SELECTS', () =>{ /* Arrow function DESCR
     it.only("MULTI SELECT forma dos", () =>{ /* Nueva arrow function anidada IT */
         cy.visit('https://demo.seleniumeasy.com/basic-select-dropdown-demo.html')
         cy.title().should('eq','Selenium Easy Demo - Automate All Scenarios')
-        cy.get('#multi-select').should("be.enabled").select(["California","Ohio","New York"])
+        cy.get('[#multi-select]').should("be.enabled").select(["California","Ohio","New York"])
         cy.wait(4000)
     })
 })

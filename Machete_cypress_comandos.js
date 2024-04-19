@@ -55,3 +55,9 @@
 /* 23 */cy.reload() /* Refresco pagina */
         cy.go("back") /* Vuelvo anterior pagina */
         cy.go("foward") /* Voy a la pagina donde estaba*/
+/* 24 */ /* Valido tabla y hago click en la opcion elegida que necesite!!!! */
+        cy.get("tr")
+        .contains("td", "8881")
+        .siblings()
+        .contains("td", "CERRADA")
+        .should("be.visible")
