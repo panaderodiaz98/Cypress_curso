@@ -27,7 +27,7 @@ class Login_FSM{
         cy.origin('https://login.microsoftonline.com',()=>{
         Cypress.require('cypress-if') /* Al ejecutar cy.origin le tengo que pasar nuevamente el requerimiento del puglin para que funcione */
         cy.get("[type='submit']").should("be.visible").then(()=>{ /* Averiguar porque el if else no le gusta recibir metodos */
-        
+
                 cy.get("[type='email']").if('visible').then(()=>{
                 cy.get("[type='email']").should("be.visible").type("adminf3@edenor.com")
                 cy.get("[type='submit']").should("be.visible").click({force:true})
@@ -38,8 +38,7 @@ class Login_FSM{
                     cy.get("[type='password']").should("be.visible").type("D%edenor.10") 
                     cy.get("[type='submit']").should("be.visible").click({force:true})
                     cy.get("[type='button']").should("be.visible").click({force:true})       
-                })
-                
+                })      
         })
         })
         

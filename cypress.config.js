@@ -22,7 +22,11 @@ module.exports = defineConfig({
     openMode: 0
   },
   watchForFileChanges: false,
-  baseUrl: "https://edenor-test.geocall.cloud"
+  baseUrl: "https://edenor-test.geocall.cloud",
+  report: "mochawesome",
+  reporterOptions: {
+    mochaFile: "cypress/Reports/Reporte_Ejecucion_id_[hash].xml"
+  }
 }})
 
 
