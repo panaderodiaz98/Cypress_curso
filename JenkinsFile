@@ -7,12 +7,12 @@ pipeline {
 
         stage('Cypress Parallel Test Suite') {
             parallel {
-                stage('Prendo vms'){
+                /* stage('Prendo vms'){
                     steps{
                         bat 'curl.exe -sO http://localhost:8080/jnlpJars/agent.jar'
                         bat 'java -jar agent.jar -url http://localhost:8080/ -secret 9130e8b46d6dcb7128e435733960671f9b33d9ffe7f4e2323b0dadaebacb41a3 -name VM2 -workDir "/home/"'
                     }
-                }
+                } */
                 stage('VM2_1') {
                     agent {
                         label "VM2_1"
