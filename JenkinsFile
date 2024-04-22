@@ -26,7 +26,7 @@ pipeline
     {
         always
         {
-            mail bcc: '', body: 'Hola que tal como estas', cc: '', from: '', replyTo: '', subject: 'Probando mail', to: 'panaderodiaz98@gmail.com'
+            publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'C:\\Cypress\\Cypress_curso\\cypress\\reports\\html', reportFiles: 'Ejecucion_jenkins.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
         }
     }         
 }
