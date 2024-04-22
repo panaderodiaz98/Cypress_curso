@@ -4,9 +4,13 @@ pipeline
 
     tools {nodejs "Node"}
 
-        parallel 
+    stages 
+    {
+        stage('Ejecuto paralelo') 
+        {
+            parallel 
             {
-                stage('VM2_1') 
+                stage('Ejecuto en VM2_1') 
                 {
                     agent {
                         label "VM2_1"
@@ -21,7 +25,7 @@ pipeline
                     }
                 }
 
-                stage('VM2_2') 
+                stage('Ejecuto en VM2_2') 
                 {
                     agent {
                         label "VM2_2"
@@ -36,6 +40,8 @@ pipeline
                     }
                 }
             }         
+        }
+    }          
     post
     {
         always
