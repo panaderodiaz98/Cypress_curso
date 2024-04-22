@@ -26,21 +26,9 @@ pipeline
     {
         always
         {
-            stage('Post mail')
-            {
-                steps
-                {
-                    mail bcc: '', body: '''Se comunica a los correspondientes emails la ejecucion finalizada de la regresion Cypress via Jenkins con reporte.
-                    Saludos''', cc: '', from: '', replyTo: '', subject: 'Regresion Jenkins', to: 'panaderodiaz98@gmail.com'
-                }
-            }
-            stage('Envio reporte')
-            {
-                steps
-                {
-                        publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'cypress/reports/', reportFiles: 'Ejecucion_jenkins.html', reportName: 'Reporte jenkins', reportTitles: 'Reporte jenkins', useWrapperFileDirectly: true])
-                }
-            }
+            mail bcc: '', body: '''Se comunica a los correspondientes emails la ejecucion finalizada de la regresion Cypress via Jenkins con reporte.
+            Saludos''', cc: '', from: '', replyTo: '', subject: 'Regresion Jenkins', to: 'panaderodiaz98@gmail.com'
+            publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'cypress/reports/', reportFiles: 'Ejecucion_jenkins.html', reportName: 'Reporte jenkins', reportTitles: 'Reporte jenkins', useWrapperFileDirectly: true])
         }
     }         
 }
