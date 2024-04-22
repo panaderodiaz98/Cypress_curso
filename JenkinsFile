@@ -6,47 +6,30 @@ pipeline
 
     stages 
     {
-        stage('Ejecuto paralelo') 
-        {
-            parallel 
-            {
-                stage('Ejecuto en VM2_1') 
-                {
-                    agent {
-                        label "VM2_1"
-                    }
-                    steps {
-                        git branch: 'main',
-                        url: 'https://github.com/panaderodiaz98/Cypress_curso.git'
-                        bat 'npm install'
-                        bat 'npm update'                       
-                        bat 'npx cypress run --record --key 708bb905-e9e2-410c-9cfa-6fbf2e7030e1 --spec "cypress\\e2e\\Curso Cypress\\Asserts" --browser chrome'
-                    
-                    }
-                }
-
-                stage('Ejecuto en VM2_2') 
-                {
-                    agent {
-                        label "VM2_2"
-                    }
-                    steps {
-                        git branch: 'main',
-                        url: 'https://github.com/panaderodiaz98/Cypress_curso.git'
-                        bat 'npm install'
-                        bat 'npm update'                       
-                        bat 'npx cypress run --record --key 708bb905-e9e2-410c-9cfa-6fbf2e7030e1 --spec "cypress\\e2e\\FSM\\Tests\\*" --browser chrome'
-                    
-                    }
-                }
-            }         
+        parallel{
+            
         }
-    }          
+        stage('Inicio dependendecias e instalaciones') 
+        {
+             steps {
+                        git branch: 'main',
+                        url: 'https://github.com/panaderodiaz98/Cypress_curso.git'
+                        bat 'npm install'
+                        bat 'npm update'                                         
+                    }
+        }
+        stage('Ejecuto tests') 
+        {
+             steps {
+                        bat 'npx cypress run --record --key 708bb905-e9e2-410c-9cfa-6fbf2e7030e1 --spec "cypress\\e2e\\Curso Cypress\\Asserts" --browser chrome'
+                    }
+        }   
+    }
     post
     {
         always
         {
-            publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'C:\\Cypress\\Cypress_curso\\cypress\\reports\\html', reportFiles: 'Ejecucion_jenkins.html', reportName: 'HTML Report', reportTitles: 'Cypress reporte paralelo', useWrapperFileDirectly: true])
+            publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'C:\\Cypress\\Cypress_curso\\cypress\\reports\\html', reportFiles: 'Ejecucion_jenkins.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
         }
     }         
 }
