@@ -54,9 +54,6 @@ pipeline
 
     stages 
     {
-        parallel{
-            
-        }
         stage('Inicio dependendecias e instalaciones') 
         {
              steps {
