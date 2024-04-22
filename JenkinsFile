@@ -26,7 +26,7 @@ pipeline
     {
         always
         {
-            publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'Cypress_curso/cypress/reports/html', reportFiles: 'Ejecucion_jenkins.html', reportName: 'Reporte jenkins', reportTitles: 'Reporte jenkins', useWrapperFileDirectly: true])
+            publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'Pipeline_corriendoParalelo/cypress/reports/html', reportFiles: 'Ejecucion_jenkins.html', reportName: 'Reporte jenkins', reportTitles: 'Reporte jenkins', useWrapperFileDirectly: true])
         }
     }         
 }
