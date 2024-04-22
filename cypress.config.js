@@ -1,9 +1,11 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
+  reporter: 'cypress-mochawesome-reporter',
   e2e: {
     setupNodeEvents(on, config) {
       // implement node event listeners her
+      require('cypress-mochawesome-reporter/plugin')(on);
     },
     
   defaultCommandTimeout: 10000, /* Timeout espera de objetos de la pagina */
@@ -23,10 +25,11 @@ module.exports = defineConfig({
   },
   watchForFileChanges: false,
   baseUrl: "https://edenor-test.geocall.cloud",
-  report: "mochawesome",
-  reporterOptions: {
-    mochaFile: "cypress/Reports/Reporte_Ejecucion_id_[hash].xml"
-  }
+  reporterOptions:{
+      reportFilename: 'Ejecucion_jenkins',
+      reportPageTitle: 'Reporte jenkins'
+      }
+
 }})
 
 

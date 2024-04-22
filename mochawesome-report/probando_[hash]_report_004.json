@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-04-20T22:02:26.738Z",
+    "end": "2024-04-20T22:02:35.046Z",
+    "duration": 8308,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e52034cb-c454-4b53-a279-7ef5f1fd4c83",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Curso Cypress\\Asserts\\Assert_text.cy.js",
+      "file": "cypress\\e2e\\Curso Cypress\\Asserts\\Assert_text.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e65fd330-c078-46f8-8702-d38975515674",
+          "title": "#Seccion 5: Primeras pruebas..ASSERT TEXT",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TEXT",
+              "fullTitle": "#Seccion 5: Primeras pruebas..ASSERT TEXT TEXT",
+              "timedOut": null,
+              "duration": 5610,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "/* Nueva arrow function anidada IT */\ncy.visit('https://demo.seleniumeasy.com/table-search-filter-demo.html');\ncy.title().should('eq', 'Selenium Easy - Table Data search and filter data');\ncy.xpath(\"//td[text()='Mike Trout']\").then(e => {\n  let texto = e.text();\n  if (texto == \"Mike Trout\") {\n    cy.log(\"Texto correcto\");\n  }\n});\ncy.wait(3000);",
+              "err": {},
+              "uuid": "b1be3c79-145e-496b-8a31-700b43d20510",
+              "parentUUID": "e65fd330-c078-46f8-8702-d38975515674",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b1be3c79-145e-496b-8a31-700b43d20510"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5610,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "probando_[hash]_report",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportFilename": "probando_[hash]_report",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

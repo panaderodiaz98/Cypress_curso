@@ -1,60 +1,41 @@
-pipeline {
+pipeline 
+{
     agent any
 
     tools {nodejs "Node"}
 
-    stages {
-
-        stage('Cypress Parallel Test Suite') {
-            parallel {
-                /* stage('Prendo vms'){
-                    steps{
-                        bat 'curl.exe -sO http://localhost:8080/jnlpJars/agent.jar'
-                        bat 'java -jar agent.jar -url http://localhost:8080/ -secret 9130e8b46d6dcb7128e435733960671f9b33d9ffe7f4e2323b0dadaebacb41a3 -name VM2 -workDir "/home/"'
-                    }
-                } */
-                stage('VM2_1') {
-                    agent {
-                        label "VM2_1"
-                    }
-                    steps {
+    stages 
+    {
+        stage('Inicio dependendecias e instalaciones') 
+        {
+             steps {
                         git branch: 'main',
                         url: 'https://github.com/panaderodiaz98/Cypress_curso.git'
                         bat 'npm install'
-                        bat 'npm update'                       
-                        bat 'npx cypress run --record --key 708bb905-e9e2-410c-9cfa-6fbf2e7030e1 --spec "cypress\\e2e\\Curso Cypress\\Asserts" --browser chrome'
-                    
+                        bat 'npm update'                                         
                     }
-                }
-
-                stage('VM2_2') {
-                    agent {
-                        label "VM2_2"
-                    }
-                    steps {
-                        git branch: 'main',
-                        url: 'https://github.com/panaderodiaz98/Cypress_curso.git'
-                        bat 'npm install'
-                        bat 'npm update'                       
-                        bat 'npx cypress run --record --key 708bb905-e9e2-410c-9cfa-6fbf2e7030e1 --spec "cypress\\e2e\\FSM\\Tests\\*" --browser chrome'
-                    
-                    }
-                }
-
-              /* stage('VM2_3') {
-                    agent {
-                        label "VM2_3"
-                    }
-                    steps {
-                        git branch: 'main',
-                        url: 'https://github.com/panaderodiaz98/Cypress_curso.git'
-                        bat 'npm install'
-                        bat 'npm update'                       
-                        bat 'npx cypress run --record --key 708bb905-e9e2-410c-9cfa-6fbf2e7030e1  --parallel'
-                    
-                    } 
-                }    */
-            }         
         }
-    }          
+        stage('Ejecuto tests') 
+        {
+             steps {
+                        bat 'npx cypress run --record --key 708bb905-e9e2-410c-9cfa-6fbf2e7030e1 --spec "cypress\\e2e\\Curso Cypress\\Asserts" --browser chrome'
+                    }
+        }   
+    }
+    post
+    {
+        always
+        {
+            steps
+            {
+                mail bcc: '', body: '''Se comunica a los correspondientes emails la ejecucion finalizada de la regresion Cypress via Jenkins con reporte.
+                Saludos''', cc: '', from: '', replyTo: '', subject: 'Regresion Jenkins', to: 'panaderodiaz98@gmail.com'
+            }
+            steps
+            {
+                    publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'cypress/reports/', reportFiles: 'Ejecucion_jenkins.html', reportName: 'Reporte jenkins', reportTitles: 'Reporte jenkins', useWrapperFileDirectly: true])
+            }
+        }
+    }         
 }
+       

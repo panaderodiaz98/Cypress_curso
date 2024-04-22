@@ -1,0 +1,395 @@
+{
+  "stats": {
+    "suites": 6,
+    "tests": 6,
+    "passes": 5,
+    "pending": 0,
+    "failures": 1,
+    "testsRegistered": 6,
+    "passPercent": 83.33333333333333,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "start": "2024-04-20T21:11:29.353Z",
+    "end": "2024-04-20T21:38:03.038Z",
+    "duration": 1593685
+  },
+  "results": [
+    {
+      "uuid": "58aed642-2537-4bfd-87b5-8e2b22021825",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Curso Cypress\\Asserts\\Assert_text.cy.js",
+      "file": "cypress\\e2e\\Curso Cypress\\Asserts\\Assert_text.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "821c0696-c86f-479b-aba5-b00a74d9165e",
+          "title": "#Seccion 5: Primeras pruebas..ASSERT TEXT",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TEXT",
+              "fullTitle": "#Seccion 5: Primeras pruebas..ASSERT TEXT TEXT",
+              "timedOut": null,
+              "duration": 5632,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "/* Nueva arrow function anidada IT */\ncy.visit('https://demo.seleniumeasy.com/table-search-filter-demo.html');\ncy.title().should('eq', 'Selenium Easy - Table Data search and filter data');\ncy.xpath(\"//td[text()='Mike Trout']\").then(e => {\n  let texto = e.text();\n  if (texto == \"Mike Trout\") {\n    cy.log(\"Texto correcto\");\n  }\n});\ncy.wait(3000);",
+              "err": {},
+              "uuid": "6c02c7fb-3c20-4275-a2e1-22999de9ffbb",
+              "parentUUID": "821c0696-c86f-479b-aba5-b00a74d9165e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6c02c7fb-3c20-4275-a2e1-22999de9ffbb"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5632,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "08434f35-21b3-416d-accc-a87cbfcb729d",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Curso Cypress\\Asserts\\Assert_and.cy.js",
+      "file": "cypress\\e2e\\Curso Cypress\\Asserts\\Assert_and.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ee1e0532-caf9-4f94-ad0e-6dd3fcb2b414",
+          "title": "#Seccion 5: Primeras pruebas..ASSERT HAVE Y CONTAINS",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "HAVE Y CONTAINS",
+              "fullTitle": "#Seccion 5: Primeras pruebas..ASSERT HAVE Y CONTAINS HAVE Y CONTAINS",
+              "timedOut": null,
+              "duration": 6026,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "/* Nueva arrow function anidada IT */\ncy.visit('https://demo.seleniumeasy.com/table-search-filter-demo.html');\ncy.title().should('eq', 'Selenium Easy - Table Data search and filter data');\ncy.get('h2').should(\"have.text\", \"Type in your search to filter data by Tasks / Assignee / Status \").and(\"be.visible\");\ncy.get('h2').should(\"contains.text\", \"Type in your search\").and(\"be.visible\");\ncy.wait(3000);",
+              "err": {},
+              "uuid": "f9a83794-4806-4c0d-9475-56f1186964ac",
+              "parentUUID": "ee1e0532-caf9-4f94-ad0e-6dd3fcb2b414",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f9a83794-4806-4c0d-9475-56f1186964ac"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6026,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "6c3afe06-f828-4af4-a633-349ed9375c0b",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Curso Cypress\\Asserts\\Assert_contains.cy.js",
+      "file": "cypress\\e2e\\Curso Cypress\\Asserts\\Assert_contains.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9d28314f-f4f8-4e35-a22e-bef8be117a1f",
+          "title": "#Seccion 5: Primeras pruebas..ASSERT CONTAINS",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "CONTAINS",
+              "fullTitle": "#Seccion 5: Primeras pruebas..ASSERT CONTAINS CONTAINS",
+              "timedOut": null,
+              "duration": 5541,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "/* Nueva arrow function anidada IT */\ncy.visit('https://demo.seleniumeasy.com/basic-checkbox-demo.html');\ncy.title().should('eq', 'Selenium Easy - Checkbox demo for automation using selenium');\ncy.get('.navbar > .container').contains(\"Table\").click();\ncy.wait(3000);",
+              "err": {},
+              "uuid": "10776d0d-3f0f-4cb2-8b51-e085a681d09a",
+              "parentUUID": "9d28314f-f4f8-4e35-a22e-bef8be117a1f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "10776d0d-3f0f-4cb2-8b51-e085a681d09a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5541,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "6ff434a9-4e81-4fff-9d89-f4fad2b5544c",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Curso Cypress\\Asserts\\Assert_find_eq.cy.js",
+      "file": "cypress\\e2e\\Curso Cypress\\Asserts\\Assert_find_eq.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "bd21d449-507e-4471-8d9e-9f6f443ee8d5",
+          "title": "#Seccion 5: Primeras pruebas..ASSERT CONTAINS",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "CONTAINS",
+              "fullTitle": "#Seccion 5: Primeras pruebas..ASSERT CONTAINS CONTAINS",
+              "timedOut": null,
+              "duration": 11602,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "/* Nueva arrow function anidada IT */\ncy.visit('https://demo.seleniumeasy.com/table-search-filter-demo.html');\ncy.title().should('eq', 'Selenium Easy - Table Data search and filter data');\ncy.get('#task-table > tbody').find(\":nth-child\").eq(1).click();\ncy.wait(3000);",
+              "err": {
+                "message": "Error: Timed out retrying after 10000ms: Syntax error, unrecognized expression: :nth-child",
+                "estack": "Error: Timed out retrying after 10000ms: Syntax error, unrecognized expression: :nth-child\n    at Sizzle.error (https://demo.seleniumeasy.com/__cypress/runner/cypress_runner.js:8470:8)\n    at Object.CHILD (https://demo.seleniumeasy.com/__cypress/runner/cypress_runner.js:8591:13)\n    at Sizzle.tokenize (https://demo.seleniumeasy.com/__cypress/runner/cypress_runner.js:9100:32)\n    at Function.Sizzle [as find] (https://demo.seleniumeasy.com/__cypress/runner/cypress_runner.js:7744:15)\n    at jQuery.fn.init.find (https://demo.seleniumeasy.com/__cypress/runner/cypress_runner.js:9805:11)\n    at getEl (https://demo.seleniumeasy.com/__cypress/runner/cypress_runner.js:135462:31)\n    at <unknown> (https://demo.seleniumeasy.com/__cypress/runner/cypress_runner.js:135499:21)\n    at Object.subjectFn (https://demo.seleniumeasy.com/__cypress/runner/cypress_runner.js:144154:16)\n    at $Cy.verifyUpcomingAssertions (https://demo.seleniumeasy.com/__cypress/runner/cypress_runner.js:143498:31)\n    at onRetry (https://demo.seleniumeasy.com/__cypress/runner/cypress_runner.js:144145:15)\n    at tryCatcher (https://demo.seleniumeasy.com/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise.attempt.Promise.try (https://demo.seleniumeasy.com/__cypress/runner/cypress_runner.js:4315:29)\n    at whenStable (https://demo.seleniumeasy.com/__cypress/runner/cypress_runner.js:144032:68)\n    at <unknown> (https://demo.seleniumeasy.com/__cypress/runner/cypress_runner.js:143973:14)\n    at tryCatcher (https://demo.seleniumeasy.com/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (https://demo.seleniumeasy.com/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (https://demo.seleniumeasy.com/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (https://demo.seleniumeasy.com/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (https://demo.seleniumeasy.com/__cypress/runner/cypress_runner.js:1701:18)\n    at Promise._fulfill (https://demo.seleniumeasy.com/__cypress/runner/cypress_runner.js:1645:18)\n    at <unknown> (https://demo.seleniumeasy.com/__cypress/runner/cypress_runner.js:5450:46)",
+                "diff": null
+              },
+              "uuid": "b679cd49-410c-40b3-9113-21024c1e8416",
+              "parentUUID": "bd21d449-507e-4471-8d9e-9f6f443ee8d5",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "b679cd49-410c-40b3-9113-21024c1e8416"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 11602,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "ba3a681b-8e35-4ba0-85d0-42d70f7ee566",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Curso Cypress\\Asserts\\Assert_have_y_contains.cy.js",
+      "file": "cypress\\e2e\\Curso Cypress\\Asserts\\Assert_have_y_contains.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7f08de54-5461-41c4-9003-b51620f81e5c",
+          "title": "#Seccion 5: Primeras pruebas..ASSERT HAVE Y CONTAINS",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "HAVE Y CONTAINS",
+              "fullTitle": "#Seccion 5: Primeras pruebas..ASSERT HAVE Y CONTAINS HAVE Y CONTAINS",
+              "timedOut": null,
+              "duration": 5612,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "/* Nueva arrow function anidada IT */\ncy.visit('https://demo.seleniumeasy.com/table-search-filter-demo.html');\ncy.title().should('eq', 'Selenium Easy - Table Data search and filter data');\ncy.get('h2').should(\"have.text\", \"Type in your search to filter data by Tasks / Assignee / Status \");\ncy.get('h2').should(\"contains.text\", \"Type in your search\");\ncy.wait(3000);",
+              "err": {},
+              "uuid": "cddabec6-4de3-47a9-ad3f-853e0a4433f7",
+              "parentUUID": "7f08de54-5461-41c4-9003-b51620f81e5c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "cddabec6-4de3-47a9-ad3f-853e0a4433f7"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5612,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "b00f7bf5-c5fd-481c-807f-a5bd6dee4d4a",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Curso Cypress\\Asserts\\Assert_text.cy.js",
+      "file": "cypress\\e2e\\Curso Cypress\\Asserts\\Assert_text.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e6642933-6faf-4d20-b7eb-32e13163fd24",
+          "title": "#Seccion 5: Primeras pruebas..ASSERT TEXT",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TEXT",
+              "fullTitle": "#Seccion 5: Primeras pruebas..ASSERT TEXT TEXT",
+              "timedOut": null,
+              "duration": 5564,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "/* Nueva arrow function anidada IT */\ncy.visit('https://demo.seleniumeasy.com/table-search-filter-demo.html');\ncy.title().should('eq', 'Selenium Easy - Table Data search and filter data');\ncy.xpath(\"//td[text()='Mike Trout']\").then(e => {\n  let texto = e.text();\n  if (texto == \"Mike Trout\") {\n    cy.log(\"Texto correcto\");\n  }\n});\ncy.wait(3000);",
+              "err": {},
+              "uuid": "106601a0-c810-4d97-a5ff-796d4a17270f",
+              "parentUUID": "e6642933-6faf-4d20-b7eb-32e13163fd24",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "106601a0-c810-4d97-a5ff-796d4a17270f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5564,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "mochaFile": "cypress/Reports/Reporte_Ejecucion_id_[hash].xml"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

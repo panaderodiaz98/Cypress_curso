@@ -16,6 +16,7 @@
 // Import commands.js using ES2015 syntax:
 import './commands'
 import './Library/login'
+import 'cypress-mochawesome-reporter/register'
 // Alternatively you can use CommonJS syntax:
 /* ::::::::::: Aca se puede declarar los HOOKS :::::::::::*/
 

@@ -12,7 +12,7 @@ describe('#Seccion 5: Primeras pruebas..CLICKS', () =>{ /* Arrow function DESCRI
         cy.wait(3000)
     })
 
-    it.only("Click force", () =>{ /* Nueva arrow function anidada IT */
+    it("Click force", () =>{ /* Nueva arrow function anidada IT */
         cy.visit('https://rodrigovillanueva.com.mx/form/demo-application')
         cy.title().should('eq','Demo: Application | RodrigoVillanueva.com.mx')
         cy.get("#edit-contact-address-2").scrollTo('center',{ ensureScrollable: false })
@@ -24,7 +24,7 @@ describe('#Seccion 5: Primeras pruebas..CLICKS', () =>{ /* Arrow function DESCRI
         cy.wait(3000)
     })
 
-    it.only("Click con coordenadas (X,Y)", () =>{ /* Nueva arrow function anidada IT */
+    it("Click con coordenadas (X,Y)", () =>{ /* Nueva arrow function anidada IT */
         cy.visit('https://rodrigovillanueva.com.mx/form/demo-application')
         cy.title().should('eq','Demo: Application | RodrigoVillanueva.com.mx')
         cy.get("#edit-contact-address-2").scrollTo('center',{ ensureScrollable: false })

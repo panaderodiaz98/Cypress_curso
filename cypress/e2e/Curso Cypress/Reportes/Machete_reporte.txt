@@ -1,0 +1,2 @@
+1. https://www.npmjs.com/package/cypress-mochawesome-reporter configurar este reporte!!!!!!!!!!!
+    Averiguar sobre los nombres o titulos o opciones
