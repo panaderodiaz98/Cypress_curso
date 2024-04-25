@@ -45,7 +45,7 @@ describe('Reserva de material seriado', () =>{
         cy.wait(2000)
         creacion_solcitud.lupa_equipo().click()
         cy.wait(2000)
-        creacion_solcitud.emergente_busqueda_cuadrilla().if().should("exist").then(()=>{
+        creacion_solcitud.emergente_busqueda_cuadrilla().if('visible').then(()=>{
             creacion_solcitud.emergente_busqueda_cuadrilla().click()
         })
         creacion_solcitud.descripcion_cuadrilla().type("auto 06")
