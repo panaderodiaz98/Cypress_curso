@@ -2,16 +2,15 @@ pipeline
 {
     agent any
 
-    parameters
-    {
-        string(name:"Spec", defaultValue:"cypress\\e2e\\**\\**", description:"Ingresar spec a ejecutar. Ej: cypress\\e2e\\FSM\\Tests\\Reserva_material_no_seriado.cy.js")
-        choice(name:"Browser", choices:['chrome','edge'], description:"Elegir tipo de browser a testear")
-    }
-
     tools {nodejs "Node"}
 
     stages 
     {
+         parameters
+        {
+            string(name:"Spec", defaultValue:"cypress\\e2e\\**\\**", description:"Ingresar spec a ejecutar. Ej: cypress\\e2e\\FSM\\Tests\\Reserva_material_no_seriado.cy.js")
+            choice(name:"Browser", choices:['chrome','edge'], description:"Elegir tipo de browser a testear")
+        }
         stage('Inicio dependendecias e instalaciones') 
         {
              steps {
@@ -24,7 +23,7 @@ pipeline
         stage('Ejecuto tests') 
         {
              steps {
-                        bat 'npx cypress run --record --key 708bb905-e9e2-410c-9cfa-6fbf2e7030e1 --spec ${Spec} --browser ${Browser}'
+                        bat 'npx cypress run --record --key 708bb905-e9e2-410c-9cfa-6fbf2e7030e1 --browser ${Browser} --spec ${Spec}'
                     }
         }   
     }
