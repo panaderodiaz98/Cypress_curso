@@ -1,0 +1,17 @@
+name: Cypress CI GIT Actions
+on: [push]
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    steps:
+      -name: Checkout
+       uses: actions/checkout@v4
+      -name: Install Dependecies
+       run: npm install && npm update
+      -name: Cypress.io
+       uses: cypress-io/github-action@v6.5.0
+         with:
+            record: true
+            browser: chrome
+            reporter: cypress-mochawesome-reporter
+       
