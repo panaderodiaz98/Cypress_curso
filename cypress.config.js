@@ -26,7 +26,7 @@ module.exports = defineConfig({
   watchForFileChanges: false,
   baseUrl: "https://edenor-test.geocall.cloud",
   reporterOptions:{
-      reportFilename: 'Ejecucion_jenkins',
+      reportFilename: 'Ejecucion_jenkins_probando',
       reportPageTitle: 'Reporte jenkins'
       }
 
