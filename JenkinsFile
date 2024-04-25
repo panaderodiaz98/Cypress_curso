@@ -5,9 +5,9 @@ pipeline
     parameters
     {
         string(name:"Spec", defaultValue:"cypress\\e2e\\**\\**", description:"Ingresar spec a ejecutar. Ej: cypress\\e2e\\FSM\\Tests\\Reserva_material_no_seriado.cy.js")
-        choice(name:"Browser", choices:['chrome','edge','firefox'], description:"Elegir tipo de browser a testear")
+        choice(name:"Browser", choices:['chrome','edge'], description:"Elegir tipo de browser a testear")
     }
-    
+
     tools {nodejs "Node"}
 
     stages 
