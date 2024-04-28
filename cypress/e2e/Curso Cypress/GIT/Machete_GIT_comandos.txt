@@ -1,0 +1,24 @@
+1- "git help xxx". Abre pagina donde figura manual del comando elegido ej "git help clone" abrira guia de el comando clone
+2- "git config --global user.namme "xxx"". Configura el user name propiamente por ej "Martin"
+   "git config" --global user.mail "xxx"".Configura el user mail propiamente por ej "panaderodiaz98@gmail.com"
+3- "git init". Inicializo proyecto git/iniciar copia-respaldo
+4- "git add." añade/hace copia del proyecto de todo lo que tengas para agregar
+    "git add *.excel" añade todos los archivos que sean extension .excel en este caso
+5- "git status" te devuelve el estado de cosas se agregan al repositorio despues del git add
+6- "git commit -m "descripcion de los cambios o version para saber que contiene" Confirma y sube lo agregado con add y revisado mediante git status
+7- "git checkout -- ," Recupera archivos borrados en la misma sesion (no cuenta si se hizo un commit)
+8- "git push" Para subir los cambios al repo de GIT definitivamente
+9- "git pull" para cargar cambios que hayan hecho en la pagina de GIT
+
+_______________________________________________________________________________________________________________________________________________________________________
+Comandos para trabar en equipo SCM:
+- Fork/Clone: 
+     - Fork: se usa para descargar el repositorio y hacerlo tuyo en la maquina local que despues luego te podes crear tu repositorio en GIT con ese mismo proyecto descargado
+     - Clone: Se usa para trabajar en proyecto con un equipo. Clonas, descargas y trabajas desde tu rama creada tu branch basicamente siguiendo trabajando EN EL MISMO REPOSITORIO a diferencia del Fork
+        ej: git clone "ruta proyecto a clonar"
+- Add, commit, push:
+     - add . : se usa para agregar los archivos donde se realizo los cambios al commit posterior que debemos ejecutar. Podriamos mediante el add elegir un archivo o los que quisieramos o simplemente agregar todo con el "."
+        ej: git add . (subir todo) ////// git add "Hooks.cy.js" (subir especificamente)
+     - commit: al ejecutar este comando tomaremos una "foto" del proyecto con los cambios realizados como para tener una "imagen" del proyecto lista para subir o lo que fuere.
+        ej: git commit -m "Subo cambios sprint 80, modulo xxx, casos de prueba xxx"
+     - push: como su palabra lo indica, empuja el commit tomado al repositorio elegido (generalmente en un proyecto a nuestra rama)
