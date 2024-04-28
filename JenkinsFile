@@ -24,8 +24,8 @@ pipeline
                         echo "${params.NAVEGADOR}"
                         echo "${NAVEGADOR}"
                         echo "params.NAVEGADOR"
-                        echo "ruta ""${RUTASPEC}"""
-                        bat "npx cypress run --record --key 708bb905-e9e2-410c-9cfa-6fbf2e7030e1 --spec ""${RUTASPEC}"" --browser ${NAVEGADOR}"
+                        echo "ruta "${RUTASPEC}""
+                        bat "npx cypress run --record --key 708bb905-e9e2-410c-9cfa-6fbf2e7030e1 --spec "${RUTASPEC}" --browser ${NAVEGADOR}"
                     }
         }   
     }
