@@ -21,9 +21,9 @@ pipeline
         stage('Ejecuto tests') 
         {
              steps {
-                        echo '${NAVEGADOR}'
-                        echo '${RUTASPEC}'
-                        bat 'npx cypress run --record --key 708bb905-e9e2-410c-9cfa-6fbf2e7030e1 --spec "cypress\\e2e\\Curso Cypress\\Asserts" --browser ${NAVEGADOR}'
+                        echo '${params.NAVEGADOR}'
+                        echo '${params.RUTASPEC}'
+                        bat 'npx cypress run --record --key 708bb905-e9e2-410c-9cfa-6fbf2e7030e1 --spec "cypress\\e2e\\Curso Cypress\\Asserts" --browser ${params.NAVEGADOR}'
                     }
         }   
     }
