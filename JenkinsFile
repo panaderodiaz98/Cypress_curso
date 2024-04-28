@@ -1,12 +1,7 @@
 pipeline 
 {
     agent any
-    parameters{
-        choice(name:'NAVEGADOR', choices: ['chrome','edge'],description:'Eleccion navegador a ejecutar')
-        string(name:'RUTASPEC',description: 'Ruta a ejecutar de specs. EJ:"--spec "cypress\\e2e\\Curso Cypress\\Asserts""')
-    }
     tools {nodejs "Node"}
-
     stages 
     {
         stage('Inicio dependendecias e instalaciones') 
@@ -20,6 +15,10 @@ pipeline
         }
         stage('Ejecuto tests') 
         {
+            parameters{
+            choice(name:'NAVEGADOR', choices: ['chrome','edge'],description:'Eleccion navegador a ejecutar')
+            string(name:'RUTASPEC',description: 'Ruta a ejecutar de specs. EJ:"--spec "cypress\\e2e\\Curso Cypress\\Asserts""')
+                      }
              steps {
                         echo '$NAVEGADOR'
                         echo '${params.NAVEGADOR}'
