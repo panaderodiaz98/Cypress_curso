@@ -22,3 +22,7 @@ Comandos para trabar en equipo SCM:
      - commit: al ejecutar este comando tomaremos una "foto" del proyecto con los cambios realizados como para tener una "imagen" del proyecto lista para subir o lo que fuere.
         ej: git commit -m "Subo cambios sprint 80, modulo xxx, casos de prueba xxx"
      - push: como su palabra lo indica, empuja el commit tomado al repositorio elegido (generalmente en un proyecto a nuestra rama)
+        ej: git push origin xxxx (branch personal, NUNCA AL MASTER/MAIN)
+        IMPORTANTE- Si no esta creada la rama en el repositorio y es la primera vez que usamos deberemos usar el siguiente comando para pushear creando la rama en el repo al mismo tiempo
+                    git push --set-upstream origin  xxxx (nombre de branch que crearemos)
+    
