@@ -1,7 +1,10 @@
 pipeline 
 {
     agent any
-
+    parameters{
+        choice(name:'NAVEGADOR', choices: ['chrome','edge'],description:'Eleccion navegador a ejecutar')
+        string(name:'RUTASPEC',description: 'Ruta a ejecutar de specs. EJ:"--spec "cypress\\e2e\\Curso Cypress\\Asserts""')
+    }
     tools {nodejs "Node"}
 
     stages 
@@ -18,7 +21,9 @@ pipeline
         stage('Ejecuto tests') 
         {
              steps {
-                        bat 'npx cypress run --record --key 708bb905-e9e2-410c-9cfa-6fbf2e7030e1 --spec "cypress\\e2e\\Curso Cypress\\Asserts" --browser chrome'
+                        echo '${NAVEGADOR}'
+                        echo '${RUTASPEC}'
+                        bat 'npx cypress run --record --key 708bb905-e9e2-410c-9cfa-6fbf2e7030e1 --spec "cypress\\e2e\\Curso Cypress\\Asserts" --browser ${NAVEGADOR}'
                     }
         }   
     }
